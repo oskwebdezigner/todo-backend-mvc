@@ -9,7 +9,8 @@ const CreateTask = async(req,res) => {
             console.log(createTask);
 
             res.json({
-                message:'task added'
+                message:'task added',
+                data:newTask
             })
         } catch (error) {
             res.json({
