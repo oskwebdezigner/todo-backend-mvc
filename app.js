@@ -19,11 +19,11 @@ app.put('/edittask/:id', async (req, res)=> {
     try {
         const id = req.params.id
         const body = req.body
-        const findId = await taskModel.findOneAndUpdate({_id:id}, body)
+        const findId = await taskModel.findOneAndUpdate({_id:id}, body, { new: true })
         if(findId){
             res.json({
             message:'updated',
-            data: body
+            data: findId
         })
         }
         console.log(id)
