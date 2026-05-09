@@ -42,6 +42,7 @@ try {
     console.log(deleteTask)
     res.json({
         message:'Task Deleted',
+        data: deletedTask
     })
 } catch (error) {
     res.json({
