@@ -10,7 +10,7 @@ const CreateTask = async(req,res) => {
 
             res.json({
                 message:'task added',
-                data:newTask
+                data:createTask
             })
         } catch (error) {
             res.json({
